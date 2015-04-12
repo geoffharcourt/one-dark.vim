@@ -307,7 +307,7 @@ call s:X("StringDelimiter","88b379","","","DarkGreen","")
 call s:X("Identifier","c6b6ee","","","LightCyan","")
 call s:X("Structure","8fbfdc","","","LightCyan","")
 call s:X("Function","fad07a","","","Yellow","")
-call s:X("Statement","66a5df","","","DarkBlue","")
+call s:X("Statement","b27ecd","","","Violet","")
 call s:X("PreProc","8fbfdc","","","LightBlue","")
 call s:X("Boolean", "d49a67", "", "", "", "")
 call s:X("Keyword", "b27ecd", "", "", "", "")
@@ -389,6 +389,7 @@ hi! link rubyString String
 " hi! link rubyStringDelimiter StringDelimiter
 hi! link rubyStringDelimiter String
 " hi! link rubyInterpolationDelimiter Identifier
+
 
 call s:X("rubyRegexpDelimiter","59b3c5","","","Cyan","")
 call s:X("rubyRegexp","59b3c5","","","Cyan","")
