@@ -252,7 +252,7 @@ if !exists("g:onedark_background_color")
   let g:onedark_background_color = "292c33"
 end
 
-call s:X("Normal","95a2bb",g:onedark_background_color,"","5f6b85","")
+call s:X("Normal","ABB2BF",g:onedark_background_color,"","5f6b85","")
 set background=dark
 
 if !exists("g:onedark_use_lowcolor_black") || g:onedark_use_lowcolor_black
@@ -301,20 +301,21 @@ call s:X("Special","799d6a","","","Green","")
 call s:X("Delimiter","668799","","","Grey","")
 call s:X("Define", "b27ecd", "", "", "", "")
 
-call s:X("String","88b379","","","Green","")
-call s:X("StringDelimiter","88b379","","","DarkGreen","")
+call s:X("String","98c379","","","Green","")
+call s:X("StringDelimiter","98c379","","","DarkGreen","")
 
 call s:X("Identifier","c6b6ee","","","LightCyan","")
-call s:X("Structure","8fbfdc","","","LightCyan","")
-call s:X("Function","fad07a","","","Yellow","")
-call s:X("Statement","b27ecd","","","Violet","")
-call s:X("PreProc","8fbfdc","","","LightBlue","")
+call s:X("Structure","c678dd","","","Violet","")
+call s:X("Function","61afef","","","SolarizedBlue","")
+call s:X("Statement","c678dd","","","Violet","")
+call s:X("PreProc","c678dd","","","Violet","")
 call s:X("Boolean", "d49a67", "", "", "", "")
 call s:X("Keyword", "b27ecd", "", "", "", "")
+call s:X("Typedef","e5c07b","","","DarkYellow","")
 
 hi! link Operator Structure
 
-call s:X("Type","ffb964","","","Yellow","")
+call s:X("Type","b27ecd","","","Violet","")
 call s:X("NonText","606060",g:onedark_background_color,"",s:termBlack,"")
 
 call s:X("SpecialKey","444444",g:onedark_background_color,"",s:termBlack,"")
