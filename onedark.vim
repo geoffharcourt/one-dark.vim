@@ -248,11 +248,21 @@ fun! s:X(group, fg, bg, attr, lcfg, lcbg)
 endfun
 " }}}
 
+let background_color = "292c33"
+let normal_font_color = "ABB2BF"
+let blue = "61afef"
+let purple = "c678dd"
+let green = "98c379"
+let yellow = "e5c07b"
+let orange = "d19a66"
+let red = "e06c75"
+let cyan = "56b6c2"
+
 if !exists("g:onedark_background_color")
   let g:onedark_background_color = "292c33"
 end
 
-call s:X("Normal","ABB2BF",g:onedark_background_color,"","5f6b85","")
+call s:X("Normal",normal_font_color,g:onedark_background_color,"","5f6b85","")
 set background=dark
 
 if !exists("g:onedark_use_lowcolor_black") || g:onedark_use_lowcolor_black
@@ -296,31 +306,31 @@ call s:X("ColorColumn","","5f6b85","","",s:termBlack)
 
 call s:X("Title","70b950","","bold","Green","")
 
-call s:X("Constant","d9bd86","","","Red","")
+call s:X("Constant",orange,"","","Red","")
 call s:X("Special","799d6a","","","Green","")
 call s:X("Delimiter","668799","","","Grey","")
-call s:X("Define", "b27ecd", "", "", "", "")
+call s:X("Define", purple, "", "", "", "")
 
-call s:X("String","98c379","","","Green","")
-call s:X("StringDelimiter","98c379","","","DarkGreen","")
+call s:X("String",green,"","","Green","")
+call s:X("StringDelimiter",green,"","","DarkGreen","")
 
 call s:X("Identifier","c6b6ee","","","LightCyan","")
-call s:X("Structure","c678dd","","","Violet","")
-call s:X("Function","61afef","","","SolarizedBlue","")
-call s:X("Statement","c678dd","","","Violet","")
-call s:X("PreProc","c678dd","","","Violet","")
-call s:X("Boolean", "d49a67", "", "", "", "")
-call s:X("Keyword", "b27ecd", "", "", "", "")
-call s:X("Typedef","e5c07b","","","DarkYellow","")
+call s:X("Structure",purple,"","","Violet","")
+call s:X("Function",blue,"","","SolarizedBlue","")
+call s:X("Statement",purple,"","","Violet","")
+call s:X("PreProc",purple,"","","Violet","")
+call s:X("Boolean", orange, "", "", "", "")
+call s:X("Keyword", purple, "", "", "", "")
+call s:X("Typedef",yellow,"","","DarkYellow","")
 
 hi! link Operator Structure
 
-call s:X("Type","b27ecd","","","Violet","")
+call s:X("Type",purple,"","","Violet","")
 call s:X("NonText","606060",g:onedark_background_color,"",s:termBlack,"")
 
 call s:X("SpecialKey","444444",g:onedark_background_color,"",s:termBlack,"")
 
-call s:X("Search","f0a0c0","302028","underline","Magenta","")
+call s:X("Search","","302028","underline","Magenta","")
 
 call s:X("Directory","dad085","","","Yellow","")
 call s:X("ErrorMsg","","902020","","","DarkRed")
@@ -331,8 +341,8 @@ call s:X("Question","65C254","","","Green","")
 
 " Spell Checking
 
-call s:X("SpellBad","","902020","underline","","DarkRed")
-call s:X("SpellCap","","0000df","underline","","Blue")
+call s:X("SpellBad","e06c75","302028","underline","Magenta","")
+call s:X("SpellCap",orange,"","underline","","")
 call s:X("SpellRare","","540063","underline","","DarkMagenta")
 call s:X("SpellLocal","","2D7067","underline","","Green")
 
@@ -351,7 +361,7 @@ call s:X("DiffText","8fbfdc","000000","reverse","Yellow","")
 " PHP
 
 hi! link phpFunctions Function
-call s:X("StorageClass","c59f6f","","","Red","")
+call s:X("StorageClass",yellow,"","","Red","")
 hi! link phpSuperglobal Identifier
 hi! link phpQuoteSingle StringDelimiter
 hi! link phpQuoteDouble StringDelimiter
@@ -375,16 +385,18 @@ call s:X("rubyPredefinedConstant", "bf6e7c", "", "", "", "")
 call s:X("rubyInclude","66a5df","","","Cyan","")
 call s:X("rubyInterpolation","88b379","","","Cyan","")
 call s:X("rubyInterpolationDelimiter","8f5355","","","Cyan","")
-hi! link rubyConstant Type
+call s:X("rubyConstant",yellow,"","","Cyan","")
+call s:X("rubyRailsFilterMethod",cyan,"","","Cyan","")
+call s:X("rubyRailsRenderMethod",cyan,"","","Cyan","")
 hi! link rubyFunction Function
 
 call s:X("rubyInstanceVariable","c6b6fe","","","Cyan","")
-call s:X("rubySymbol","59b3c5","","","Blue","")
+call s:X("rubySymbol",cyan,"","","Blue","")
 hi! link rubyGlobalVariable rubyInstanceVariable
 " hi! link rubyModule rubyClass
-call s:X("rubyControl","b27ecd","","","Blue","")
-call s:X("rubyBlockParameterList", "bf637c", "", "", "", "")
-call s:X("rubyBlockParameter", "bf637c", "", "", "", "")
+call s:X("rubyControl",purple,"","","Blue","")
+call s:X("rubyBlockParameterList", red, "", "", "", "")
+call s:X("rubyBlockParameter", red, "", "", "", "")
 
 hi! link rubyString String
 " hi! link rubyStringDelimiter StringDelimiter
@@ -392,8 +404,8 @@ hi! link rubyStringDelimiter String
 " hi! link rubyInterpolationDelimiter Identifier
 
 
-call s:X("rubyRegexpDelimiter","59b3c5","","","Cyan","")
-call s:X("rubyRegexp","59b3c5","","","Cyan","")
+call s:X("rubyRegexpDelimiter",cyan,"","","Cyan","")
+call s:X("rubyRegexp",cyan,"","","Cyan","")
 call s:X("rubyRegexpSpecial","a40073","","","Magenta","")
 
 call s:X("rubyPredefinedIdentifier","de5577","","","Red","")
